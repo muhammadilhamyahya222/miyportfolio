@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&family=Quicksand:wght@400;500;700&display=swap');
+
+:root {
+    --primaryTextColor: #323232;
+    --secondaryTextColor: #656d72;
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #ebf3f8;
+    --tertiaryBackgroundColor: #f3faff;
+
+    --primaryIconColor: #3282b8;
+    --primaryIconColorHover: #2d75a6;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 1.5rem;
+    background: var(--primaryIconColor);
+    border: 1.5px solid var(--borderColor);
+    border-radius: 5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(45, 117, 166, 0.1) 0px 3px 5px;
+}
+
+/* Title */
+.sub-title {
+    color: var(--secondaryTextColor);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.section-title {
+    margin: 0.5rem 0 3rem;
+    font-size: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1120px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70%;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/* Hamburger Menu */
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.hamburger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* Hero */
+#hero {
+    height: 96vh;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+}
+
+.title {
+    font-size: 4.2rem;
+    color: var(--primaryTextColor);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 1rem 0;
+}
+
+.hero-img img{
+    width: 100%;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text p {
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* About */
+#about {
+    padding: var(--sectionPadding);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.about-img img{
+    width: 80%;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+}
+
+.about-icon i {
+    color: var(--secondaryTextColor);
+    margin: 1rem 1rem 0 0;
+    padding: 0.4rem;
+    transition: 0.2s ease-in-out;
+}
+
+.about-icon i:hover {
+    color: var(--primaryIconColor);
+}
+/* Service */
+
+#services {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+
+.services .sub-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.service {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: 3rem;
+    transition: 0.2s ease-in-out;
+}
+
+.service:hover {
+    margin-top: -1rem;
+    background: var(--primaryBackgroundColor);
+    border-radius: 3rem;
+}
+
+.service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.service-icon {
+    background: var(--tertiaryBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 1.5rem;
+}
+
+.service-icon i {
+    color: var(--primaryIconColor);
+}
+
+/* Portfolios */
+#portfolios {
+    padding: var(--sectionPadding);
+}
+
+.portfolio {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor);
+}
+
+.portfolio-cover {
+    height: 208px;
+}
+
+.portfolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-desc {
+    padding: 2rem 1.5rem;
+}
+
+.portfolio-desc p {
+    text-align: justify;
+}
+
+.portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio-title span {
+    font-weight: 400;
+}
+
+.portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-title a i:hover{
+    color: var(--primaryIconColor);
+}
+
+.portfolio-title a i {
+    color: var(--primaryTextColor);
+    transition: .2s ease-in-out;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.portfolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    color: var(--secondaryTextColor);
+}
+
+/* Journey */
+
+#journeys {
+    padding: var(--sectionPadding);
+}
+
+.journey-line {
+    position: relative;
+}
+
+.journey-box {
+    padding: 0.6rem 3rem;
+    position: relative;
+    width: 50%;
+}
+
+.journey {
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+.journey h4 {
+    font-size: 1.3rem;
+}
+
+.journey p {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.journey-left-side {
+    left: 0;
+}
+
+.journey-right-side {
+    left: 50%;
+}
+
+.journey-box .ring {
+    position: absolute;
+    background-color: var(--primaryIconColor);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    right: -10px;
+    top: 3.3rem;
+    z-index: -99;
+}
+
+.journey-right-side .ring {
+    left: -10px;
+}
+
+.journey-line::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: var(--primaryIconColor);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+}
+
+/* Contact */
+#contact {
+    padding: var(--sectionPadding);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: sans-serif;
+    background: none;
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
+    resize: none;
+    transition: 0.4s ease-in-out;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--secondaryTextColor);
+}
+
+.contact-form input:hover, .contact-form textarea:hover {
+    border: 1px solid var(--primaryIconColor);
+    border-radius: 12px;
+    box-shadow: rgba(45, 117, 166, 0.1) 0px 3px 5px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--primaryIconColor);
+    border-radius: 12px;
+    box-shadow: rgba(45, 117, 166, 0.1) 0px 3px 5px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--primaryIconColor);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: var(--primaryIconColorHover);
+    box-shadow: rgba(45, 117, 166, 0.1) 0px 3px 5px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.contact-item-icon {
+    background: var(--tertiaryBackgroundColor);
+    color: var(--primaryTextColor);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0.5rem;
+    color: var(--secondaryTextColor);
+}
+
+.footer-icons a:hover {
+    color: var(--primaryTextColor);
+}
